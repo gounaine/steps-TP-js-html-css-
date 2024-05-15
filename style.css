@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=muli:wght@400;700&display=swap');
+:root{
+  --color-fill:blue;
+  --color-empty:#999999b8;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'muli', sans-serif;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 350px;
+}
+
+.border.active{
+  background-color: var(--color-fill);
+  width: 80%;
+  z-index: -1;
+  height: 3px;
+  left: 1px;
+  position: absolute;
+  top:8px;
+  
+  
+}
+.border{
+  background-color: var(--color-empty);
+  width: 80%;
+  z-index: -1;
+  height: 3px;
+  left: 1px;
+  position: absolute;
+  top:8px;
+  transition: 0.4s ease-in;
+  
+  
+}
+.arrange.active{
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border:2px solid var(--color-fill);
+  
+}
+.arrange{
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border:2px solid var(--color-empty);
+  transition: 0.4s ease-in;
+  cursor: pointer;
+}
+ .button{
+ margin-top: 100px;
+ position: absolute;
+
+ }
+ .btn{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: #eee;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
